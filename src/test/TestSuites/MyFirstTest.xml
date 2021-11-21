@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "MyFirstTest" parallel="methods" thread-count="4">
+    <test name = "exampleTest1">
+        <parameter name="username" value="alex@google.com"/>
+        <parameter name="password" value="12345678"/>
+
+        <groups>
+            <run>
+                <include name="SecondGroup" />
+            </run>>
+        </groups>
+
+        <classes>
+        <class name = "OurFirstGroup"/>
+        <class name = "OurFirstTest"/>
+<!--        <class name= "OurSecondTest2"/>-->
+        </classes>
+
+
+    </test>
+</suite>
